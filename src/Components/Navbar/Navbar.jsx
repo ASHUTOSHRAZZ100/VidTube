@@ -1,7 +1,15 @@
 import React from "react";
 import "./Navbar.css";
 
-import {menu,logo,search,upload,more,notification,user_profile} from '../Files'
+import {
+  menu,
+  logo,
+  search,
+  upload,
+  more,
+  notification,
+  user_profile,
+} from "../Files";
 
 const Navbar = () => {
   return (
@@ -12,9 +20,8 @@ const Navbar = () => {
       </div>
       <din className="nav-middle flex-div">
         <div className="search-box flex-div">
-
-        <input type="text" placeholder="Search" />
-        <img src={search} alt="" />
+          <input type="text" placeholder="Search" />
+          <img src={search} alt="" />
         </div>
       </din>
       <div className="nav-right flex-div">
