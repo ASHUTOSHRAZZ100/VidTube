@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Feed.css";
 import {
   dots,
@@ -15,17 +15,30 @@ import {
 import { Link } from "react-router-dom";
 
 const Feed = () => {
+
+  const [tittle,setTitle] = useState("Best channel to learn codimg that help you to be a web developer")
+
+  const checkHeaderLenght = (header)=>{
+    header.trim();
+    if(header.length>67){
+     header= header.substring(0,67)+'...'
+    }
+    return header;
+  }
+  const arr = [1,2,3,4,5]
+
   return (
     <div className="feed">
-      <Link to={`video/20/4521`} className="card">
+    <Link to={`video/20/4521`} className="card">
         <img src={thumbnail1} alt="" />
         <div className="thumbnail-creater">
           <img id="creater" src={tom} alt="" />
-          <div className="">
+          <div >
+       
             <h2>
-              Best channel to learn codimg that help you to be a web developer
+              {checkHeaderLenght("Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?")}
             </h2>
-            <h3>Greatstack</h3>
+            <Link id="creater-link" to={`video/20/4590`}>Greatstack</Link>
             <p>15k views &bull; 2 day ago</p>
           </div>
           <Link>
@@ -33,390 +46,27 @@ const Feed = () => {
           </Link>
         </div>
       </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail2} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
+      {
+        arr.map((vlaue)=>(
+          <Link to={`video/20/4521`} className="card">
+          <img src={thumbnail1} alt="" />
+          <div className="thumbnail-creater">
+            <img id="creater" src={tom} alt="" />
+            <div >
+         
+              <h2>
+                {checkHeaderLenght("Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?")}
+              </h2>
+              <Link id="creater-link" to={`video/20/4590`}>Greatstack</Link>
+              <p>15k views &bull; 2 day ago</p>
+            </div>
+            <Link>
+              <img id="img-menu" src={dots} alt="" />
+            </Link>
           </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail3} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail4} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail5} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail6} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail7} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail8} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail1} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail2} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail3} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail4} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail5} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail6} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail7} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail8} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>{" "}
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail1} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail2} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail3} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail4} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail5} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail6} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail7} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail8} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
-      <Link to={`video/20/4521`} className="card">
-        <img src={thumbnail8} alt="" />
-        <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div className="">
-            <h2>
-              Best channel to learn codimg that help you to be a web developer
-            </h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 day ago</p>
-          </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
-        </div>
-      </Link>
+        </Link>
+        ))
+      }
     </div>
   );
 };

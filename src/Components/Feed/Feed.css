@@ -29,15 +29,15 @@
 }
 
 .thumbnail-creater h2{
-    font-size:16px;
+    font-size:14px;
     font-weight: 600;
     color:#000;
     margin: 5px 0;
 }
 
-.thumbnail-creater h3{
+#creater-link{
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 300;
     color: #555;
     margin: 6px 0;
 
