@@ -3,6 +3,7 @@ import blogs from "../assets/blogs.png";
 import cameron from "../assets/cameron.png";
 import cast from "../assets/cast.png";
 import dislike from "../assets/dislike.png";
+import dots from "../assets/dots.png";
 import entertainment from "../assets/entertainment.png";
 import explore from "../assets/explore.png";
 import game_icon from "../assets/game_icon.png";
@@ -14,7 +15,6 @@ import library from "../assets/library.png";
 import like from "../assets/like.png";
 import logo from "../assets/logo.png";
 import megan from "../assets/megan.png";
-
 import menu from "../assets/menu.png";
 import messages from "../assets/messages.png";
 import more from "../assets/more.png";
@@ -49,6 +49,7 @@ export {
   cameron,
   cast,
   dislike,
+  dots,
   entertainment,
   explore,
   game_icon,
