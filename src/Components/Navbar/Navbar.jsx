@@ -11,11 +11,16 @@ import {
   user_profile,
 } from "../Files";
 
-const Navbar = () => {
+const Navbar = ({ setSidebar }) => {
   return (
     <nav className="flex-div">
       <div className="nav-left flex-div">
-        <img className="menu_icon" src={menu} alt="" />
+        <img
+          className="menu_icon"
+          onClick={() => setSidebar((prev) => !prev)}
+          src={menu}
+          alt=""
+        />
         <img className="logo" src={logo} alt="" />
       </div>
       <din className="nav-middle flex-div">
