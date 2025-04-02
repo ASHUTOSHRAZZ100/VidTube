@@ -11,14 +11,31 @@
     border-radius:10px ;
 }
 
-.card h2{
+.thumbnail-creater{
+    display: flex;
+    flex-direction: row;
+}
+#creater{
+    width: 50px;
+    height: 50%;
+    border-radius: 50%;
+    margin: 4px 7px;
+}
+
+#img-menu{
+    width: 20px;
+    border-radius: 50%;
+    margin: 4px 7px;
+}
+
+.thumbnail-creater h2{
     font-size:16px;
     font-weight: 600;
     color:#000;
     margin: 5px 0;
 }
 
-.card h3{
+.thumbnail-creater h3{
     font-size: 14px;
     font-weight: 600;
     color: #555;
@@ -26,7 +43,7 @@
 
 }
 
-.card p{
+.thumbnail-creater p{
     font-size: 14px;
     font-weight: 200;
     color: #8a8a8a;
