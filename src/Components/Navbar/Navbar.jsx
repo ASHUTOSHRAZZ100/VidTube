@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-
+import { Link } from "react-router-dom";
 import {
   menu,
   logo,
@@ -21,7 +21,9 @@ const Navbar = ({ setSidebar }) => {
           src={menu}
           alt=""
         />
-        <img className="logo" src={logo} alt="" />
+        <Link to={`/`}>
+          <img className="logo" src={logo} alt="" />
+        </Link>
       </div>
       <din className="nav-middle flex-div">
         <div className="search-box flex-div">
