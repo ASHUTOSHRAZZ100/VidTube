@@ -1,5 +1,6 @@
 import approve from "../assets/approve.png";
 import automobiles from "../assets/automobiles.png";
+import backgroundImg from "../assets/backgroundImg.png"
 import blogs from "../assets/blogs.png";
 import cameron from "../assets/cameron.png";
 import cast from "../assets/cast.png";
@@ -47,6 +48,7 @@ import voice_search from "../assets/voice-search.png";
 export {
   approve,
   automobiles,
+  backgroundImg,
   blogs,
   cameron,
   cast,
