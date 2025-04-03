@@ -25,12 +25,12 @@ const Navbar = ({ setSidebar }) => {
           <img className="logo" src={logo} alt="" />
         </Link>
       </div>
-      <din className="nav-middle flex-div">
+      <div className="nav-middle flex-div">
         <div className="search-box flex-div">
           <input type="text" placeholder="Search" />
           <img src={search} alt="" />
         </div>
-      </din>
+      </div>
       <div className="nav-right flex-div">
         <img src={upload} alt="" />
         <img src={more} alt="" />
