@@ -1,3 +1,4 @@
+import approve from "../assets/approve.png";
 import automobiles from "../assets/automobiles.png";
 import blogs from "../assets/blogs.png";
 import cameron from "../assets/cameron.png";
@@ -44,6 +45,7 @@ import video from "../assets/video.mp4";
 import voice_search from "../assets/voice-search.png";
 
 export {
+  approve,
   automobiles,
   blogs,
   cameron,
