@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Feed.css";
 import {
+  approve,
   dots,
   thumbnail1,
   thumbnail2,
@@ -12,61 +13,144 @@ import {
   thumbnail8,
   tom,
 } from "../Files";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Feed = () => {
+  const navigate = useNavigate();
 
-  const [tittle,setTitle] = useState("Best channel to learn codimg that help you to be a web developer")
-
-  const checkHeaderLenght = (header)=>{
-    header.trim();
-    if(header.length>67){
-     header= header.substring(0,67)+'...'
+  const checkHeaderLenght = (header) => {
+    header = header.trim();
+    if (header.length > 67) {
+      header = header.substring(0, 67) + "...";
     }
     return header;
-  }
-  const arr = [1,2,3,4,5]
+  };
+
+  const arr = [
+    thumbnail1,
+    thumbnail2,
+    thumbnail3,
+    thumbnail4,
+    thumbnail5,
+    thumbnail6,
+    thumbnail7,
+    thumbnail8,
+    thumbnail1,
+    thumbnail2,
+    thumbnail3,
+    thumbnail4,
+    thumbnail5,
+    thumbnail6,
+    thumbnail7,
+    thumbnail8,
+    thumbnail1,
+    thumbnail2,
+    thumbnail3,
+    thumbnail4,
+    thumbnail5,
+    thumbnail6,
+    thumbnail7,
+    thumbnail8,
+  ];
 
   return (
     <div className="feed">
-    <Link to={`video/20/4521`} className="card">
+      <div
+        className="card"
+        onClick={(e) => {
+          e.stopPropagation();
+          navigate(`/video/20/4020`);
+        }}
+      >
         <img src={thumbnail1} alt="" />
         <div className="thumbnail-creater">
-          <img id="creater" src={tom} alt="" />
-          <div >
-       
+          <img
+            id="img-creater"
+            src={tom}
+            alt=""
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/creater/10`);
+            }}
+          />
+          <div>
             <h2>
-              {checkHeaderLenght("Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?")}
+              {checkHeaderLenght(
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?"
+              )}
             </h2>
-            <Link id="creater-link" to={`video/20/4590`}>Greatstack</Link>
+            <p
+              id="p-link"
+              onClick={(e) => {
+                e.stopPropagation();
+                navigate(`/creater/10`);
+              }}
+            >
+              Greatstack <img id="p-link-approve-icon" src={approve} alt="" />
+            </p>
             <p>15k views &bull; 2 day ago</p>
           </div>
-          <Link>
-            <img id="img-menu" src={dots} alt="" />
-          </Link>
+          <img
+            id="img-menu"
+            src={dots}
+            alt=""
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/video/10/4580`);
+            }}
+          />
         </div>
-      </Link>
-      {
-        arr.map((vlaue)=>(
-          <Link to={`video/20/4521`} className="card">
-          <img src={thumbnail1} alt="" />
+      </div>
+
+      {arr.map((value, index) => (
+        <div
+          key={index}
+          className="card"
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/video/20/4020`);
+          }}
+        >
+          <img src={value} alt="" />
           <div className="thumbnail-creater">
-            <img id="creater" src={tom} alt="" />
-            <div >
-         
+            <img
+              id="img-creater"
+              src={tom}
+              alt=""
+              onClick={(e) => {
+                e.stopPropagation();
+                navigate(`/creater/10`);
+              }}
+            />
+            <div>
               <h2>
-                {checkHeaderLenght("Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?")}
+                {checkHeaderLenght(
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?"
+                )}
               </h2>
-              <Link id="creater-link" to={`video/20/4590`}>Greatstack</Link>
+              <p
+                id="p-link"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigate(`/creater/10`);
+                }}
+              >
+                Greatstack <img id="p-link-approve-icon" src={approve} alt="" />
+              </p>
               <p>15k views &bull; 2 day ago</p>
             </div>
-            <Link>
-              <img id="img-menu" src={dots} alt="" />
-            </Link>
+            <img
+              id="img-menu"
+              src={dots}
+              alt=""
+              onClick={(e) => {
+                e.stopPropagation();
+                navigate(`/video/10/4580`);
+              }}
+            />
           </div>
-        </Link>
-        ))
-      }
+        </div>
+      ))}
     </div>
   );
 };
