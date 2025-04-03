@@ -14,7 +14,8 @@ import history from "../assets/history.png";
 import home from "../assets/home.png";
 import jack from "../assets/jack.png";
 import library from "../assets/library.png";
-import like from "../assets/like.png";
+import lightDark from "../assets/light_dark.png"
+ import like from "../assets/like.png";
 import logo from "../assets/logo.png";
 import megan from "../assets/megan.png";
 import menu from "../assets/menu.png";
@@ -62,6 +63,7 @@ export {
   home,
   jack,
   library,
+  lightDark,
   like,
   logo,
   megan,
