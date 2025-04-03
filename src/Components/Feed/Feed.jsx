@@ -55,7 +55,7 @@ const Feed = () => {
 
   return (
     <div className="feed">
-      <div
+    <div
         className="card"
         onClick={(e) => {
           e.stopPropagation();
@@ -100,7 +100,7 @@ const Feed = () => {
             }}
           />
         </div>
-      </div>
+      </div>  
 
       {arr.map((value, index) => (
         <div
