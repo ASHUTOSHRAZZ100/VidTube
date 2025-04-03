@@ -9,7 +9,7 @@ import {
   thumbnail6,
   thumbnail7,
   thumbnail8,
-  tom,dots
+  dots
 } from "../Files";
 import {Link} from 'react-router-dom'
 
@@ -22,7 +22,21 @@ const Recommended = () => {
     }
     return header;
   }
-  const arr = [1,2,3,4,5,6,7,8,9]
+  const arr = [thumbnail1,
+    thumbnail2,
+    thumbnail3,
+    thumbnail4,
+    thumbnail5,
+    thumbnail6,
+    thumbnail7,
+    thumbnail8,thumbnail1,
+    thumbnail2,
+    thumbnail3,
+    thumbnail4,
+    thumbnail5,
+    thumbnail6,
+    thumbnail7,
+    thumbnail8]
   return (
     <div className="recommended">
       <div className="side-video-list">
@@ -37,9 +51,9 @@ const Recommended = () => {
         </>
       </div>
       {
-        arr.map((_,index)=>(
+        arr.map((Value,index)=>(
           <div key={index} className="side-video-list">
-        <img src={thumbnail1} alt="thumbnail-img" />
+        <img src={Value} alt="thumbnail-img" />
         <div className="vid-info">
           <h4>{checkHeaderLenght("Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?")}</h4>
           <p>Great Stack</p>
