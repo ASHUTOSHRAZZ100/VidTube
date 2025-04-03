@@ -6,7 +6,7 @@ import {
   logo,
   search,
   upload,
-  more,
+  lightDark,
   notification,
   user_profile,
 } from "../Files";
@@ -33,7 +33,7 @@ const Navbar = ({ setSidebar }) => {
       </div>
       <div className="nav-right flex-div">
         <img src={upload} alt="" />
-        <img src={more} alt="" />
+        <img src={lightDark} alt="" />
         <img src={notification} alt="" />{" "}
         <img className="user-icon" src={user_profile} alt="" />
       </div>
