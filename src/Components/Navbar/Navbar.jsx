@@ -11,15 +11,15 @@ import {
   user_profile,
 } from "../Files";
 
-const Navbar = ({ setSidebar }) => {
+const Navbar = ({ setSidebar, setLightToggle, lightToggle }) => {
   return (
-    <nav className="flex-div">
+    <nav className={`flex-div ${lightToggle ? "dark-mode" : ""}`}>
       <div className="nav-left flex-div">
         <img
           className="menu_icon"
           onClick={() => setSidebar((prev) => !prev)}
           src={menu}
-          alt=""
+          alt="menu-icon"
         />
         <Link to={`/`}>
           <img className="logo" src={logo} alt="" />
@@ -33,7 +33,11 @@ const Navbar = ({ setSidebar }) => {
       </div>
       <div className="nav-right flex-div">
         <img src={upload} alt="" />
-        <img src={lightDark} alt="" />
+        <img
+          src={lightDark}
+          alt="toggle-icon"
+          onClick={() => setLightToggle((prev) => !prev)}
+        />
         <img src={notification} alt="" />{" "}
         <img className="user-icon" src={user_profile} alt="" />
       </div>
