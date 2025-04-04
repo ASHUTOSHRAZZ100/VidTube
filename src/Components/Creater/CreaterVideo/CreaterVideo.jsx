@@ -2,7 +2,7 @@ import React from "react";
 import "./CreaterVideo.css";
 import { useNavigate } from "react-router-dom";
 import { thumbnail1, dots, tom, approve } from "../../Files";
-const CreaterVideo = () => {
+const CreaterVideo = ({ lightToggle }) => {
   const navigate = useNavigate();
 
   const checkHeaderLenght = (header) => {
@@ -13,63 +13,45 @@ const CreaterVideo = () => {
     return header;
   };
 
-  const arr= [1,2,3,4,5,6,7,8,9]
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
-    <div>
+    <div className={`main-container ${lightToggle ? "dark-mode" : ""}`}>
       <ul>
-        <li id="list-link">Videos</li>
+        <li className="section-title">Home</li>
+        <li className="section-title">Videos</li>
+        <li className="section-title">PlayList</li>
+        <li className="section-title">About</li>
       </ul>
       <hr />
       <div className="feed">
-      {
-        arr.map((_,index)=>(<div key={index}
-            className="card"
-            onClick={(e) => {
-              e.stopPropagation();
-              navigate(`/video/20/4020`);
+        {arr.map((_, index) => (
+          <div
+            onClick={() => {
+              navigate(`/video/1245/2365`);
             }}
+            class="video-card"
           >
-            <img src={thumbnail1} alt="" />
-            <div className="thumbnail-creater">
+            <div class="video-thumbnail-container">
               <img
-                id="img-creater"
-                src={tom}
-                alt=""
-                onClick={(e) => {
-                  e.stopPropagation();
-                  navigate(`/creater/10`);
-                }}
+                class="video-thumbnail"
+                src={thumbnail1}
+                alt="Video thumbnail"
               />
-              <div>
-                <h2>
-                  {checkHeaderLenght(
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus nisi omnis rem libero suscipit, esse mollitia culpa dolores minus itaque, quisquam tempora voluptas nesciunt consequuntur nobis dignissimos et quia?"
-                  )}
-                </h2>
-                <p
-                  id="p-link"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(`/creater/10`);
-                  }}
-                >
-                  Greatstack <img id="p-link-approve-icon" src={approve} alt="" />
-                </p>
-                <p>15k views &bull; 2 day ago</p>
-              </div>
-              <img
-                id="img-menu"
-                src={dots}
-                alt=""
-                onClick={(e) => {
-                  e.stopPropagation();
-                  navigate(`/video/10/4580`);
-                }}
-              />
+              <span class="video-duration">17:00</span>
             </div>
-          </div>))
-      }
+            <div class="video-content">
+              <div class="video-info">
+                <h2 class="video-title">
+                  100 free seats every month, DSA sheet, Live classes | Coding
+                  Hero V2
+                </h2>
+                <p class="video-meta">25K views • 6 days ago</p>
+              </div>
+              <img class="menu-icon" src={dots} alt="Options menu" />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
