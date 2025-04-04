@@ -1,10 +1,15 @@
-.container{
-    background: #f9f9f9;
-    padding-left: 17%;
-    padding-right: 2%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.child-container {
+  background: #f9f9f9;
+  padding-left: 17%;
+  padding-right: 2%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.large-container{
-    padding-left: 7%;
+.large-child-container {
+  padding-left: 7%;
+}
+/* Dark Mode Enhancements */
+.dark-mode {
+  background-color: #0d0d0d;
+  color: aliceblue;
 }

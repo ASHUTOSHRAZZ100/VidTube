@@ -1,18 +1,21 @@
-import React from 'react'
-import './Profile.css'
-import Creater from '../../Components/Creater/Creater'
-import Sidebar from '../../Components/Navbar/Sidebar/Sidebar'
-import CreaterVideo from '../../Components/Creater/CreaterVideo/CreaterVideo'
-const Profile = ({sidebar}) => {
+import React from "react";
+import "./Profile.css";
+import Creater from "../../Components/Creater/Creater";
+import Sidebar from "../../Components/Navbar/Sidebar/Sidebar";
+import CreaterVideo from "../../Components/Creater/CreaterVideo/CreaterVideo";
+const Profile = ({ sidebar, lightToggle }) => {
+  console.log("lightToggle->", lightToggle);
   return (
-    <div>
-      <Sidebar sidebar={sidebar}/>
-      <div className={`container ${sidebar?"":"large-container"}`}>
-      <Creater/>
-      <CreaterVideo/>
+    <div className={`parent-container ${lightToggle ? "dark-mode" : ""}`}>
+      <Sidebar sidebar={sidebar} lightToggle={lightToggle} />
+      <div
+        className={`child-container ${sidebar ? "" : "large-child-container"}`}
+      >
+        <Creater lightToggle={lightToggle} />
+        <CreaterVideo lightToggle={lightToggle} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;
