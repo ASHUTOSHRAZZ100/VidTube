@@ -1,136 +1,190 @@
-.play-video{
-    flex-basis: 69%;
+.video-container {
+  flex-basis: 69%;
 }
 
-.play-video video{
-    width: 100%;
-    border-radius: 20px;
+.video-player {
+  width: 100%;
+  border-radius: 20px;
 }
 
-.play-video h3{
-    margin-top: 10px;
-    font-weight: 600;
-    font-size: 22px;
+.video-title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 22px;
 }
 
-.play-video-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #5a5a5a;
+.video-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #5a5a5a;
 }
 
-.play-video-info img{
-    width: 20px;
-    margin-right: 8px;
+.video-actions img {
+  width: 20px;
+  margin-right: 8px;
 }
 
-.play-video-info span{
-    display: inline-flex;
-    align-items: center;
-    margin-left: 15px;
+.video-actions span {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 15px;
 }
 
-.play-video hr{
-    border:0;
-    height: 1px;
-    background: #ccc;
-    margin: 10px 0;
+.video-container hr {
+  width: auto;
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
 }
 
-.publisher{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+.channel-publisher {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.publisher div{
-flex: 1;
-line-height: 18px;
+.publisher-info {
+  flex: 1;
+  line-height: 18px;
 }
 
-.publisher img{
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 15px;
+.channel-publisher img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
-.publisher div p{
-color: #000;
-font-weight: 600;
-font-size: 18px;
+.publisher-name {
+  color: #000;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.publisher div span{
-    font-size: 13px;
-    color: #5a5a5a;
+.subscriber-count {
+  font-size: 13px;
+  color: #5a5a5a;
 }
 
-.publisher button{
-    background: red;
-    color: #fff;
-    padding: 8px 30px;
-    border: 0;
-    outline: 0;
-    border-radius: 4px;
-    cursor: pointer;
+.subscribe-button {
+  background: black;
+  color: #fff;
+  padding: 8px 30px;
+  font-weight: 700;
+  border: 0;
+  outline: 0;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.vid-description{
-    padding-left: 55px;
-    margin: 15px 0;
+.subscribe-button-mode{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
-.vid-description p{
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #5a5a5a;
+.video-description {
+  padding-left: 55px;
+  margin: 15px 0;
 }
 
-.vid-description h4{
-    font-size: 14px ;
-    color: #5a5a5a;
-    margin-top: 15px;
+.video-description p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #5a5a5a;
 }
 
-.comment{
-    display: flex;
-    align-items: flex-start;
-    margin: 20px 0;
+.comment-count {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin-top: 15px;
 }
 
-.comment img{
-    width: 35px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-.comment h3{
-    font-size: 14px;
-    margin-bottom: 2px;
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0;
 }
 
-.comment h3 span{
-    font-size: 12px;
-    color: #5a5a5a;
-    font-weight: 500;
-    margin-left: 8px;
+.comment-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.comment-author {
+  font-size: 14px;
+  margin-bottom: 2px;
 }
 
-.comment-action{
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-.comment-action  img{
-    border-radius: 0;
-    width:20px ;
-    margin-right: 5px;
+.comment-date {
+  font-size: 12px;
+  color: #5a5a5a;
+  font-weight: 500;
+  margin-left: 8px;
 }
 
-.comment-action span{
-    margin-right: 20px;
-    color: #5a5a5a;
+.comment-actions {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
 }
+.comment-actions img {
+  border-radius: 0;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.comment-actions span {
+  margin-right: 20px;
+  color: #5a5a5a;
+}
+
+/* Dark Mode Enhancements */
+.dark-mode {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .video-title,
+  .dark-mode .view-info,
+  .dark-mode .video-meta,
+  .dark-mode .video-stats,
+  .dark-mode .publisher-name,
+  .dark-mode .subscriber-count,
+  .dark-mode .video-description p,
+  .dark-mode .comment-count,
+  .dark-mode .comment-author,
+  .dark-mode .comment-date,
+  .dark-mode .comment-actions span {
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .video-actions img,
+  .dark-mode .comment-actions img {
+    filter: brightness(0) invert(1); /* Make icons white */
+  }
+  
+  .dark-mode .subscribe-button {
+    background-color: white;
+    color: black;
+  }
+
+  .dark-mode .subscribe-button-mode{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .dark-mode hr {
+    background: #333;
+  }
+  
+  .dark-mode .video-player {
+    border: 2px solid #222;
+  }
+  
