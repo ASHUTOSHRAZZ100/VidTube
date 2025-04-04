@@ -43,6 +43,7 @@
   object-fit: contain;
 }
 
+/* Dark Mode Enhancements */
 .recommended.dark-mode {
   background-color: #0d0d0d;
 }
