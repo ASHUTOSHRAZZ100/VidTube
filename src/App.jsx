@@ -6,13 +6,27 @@ import Video from "./Pages/Video/Video";
 import Profile from "./Pages/Profile/Profile";
 function App() {
   const [sidebar, setSidebar] = useState(false);
+  const [lightToggle, setLightToggle] = useState(false);
   return (
-    <div>
-      <Navbar setSidebar={setSidebar}/>
+    <div className={`main ${lightToggle ? "dark-mode" : ""}`}>
+      <Navbar
+        setSidebar={setSidebar}
+        setLightToggle={setLightToggle}
+        lightToggle={lightToggle}
+      />
       <Routes>
-        <Route path="/" element={<Home sidebar={sidebar}/>} />
-        <Route path="/video/:categoryId/:videoId" element={<Video />} />
-        <Route path="/creater/:Id"element={<Profile sidebar={sidebar}/>}/>
+        <Route
+          path="/"
+          element={<Home sidebar={sidebar} lightToggle={lightToggle} />}
+        />
+        <Route
+          path="/video/:categoryId/:videoId"
+          element={<Video lightToggle={lightToggle} />}
+        />
+        <Route
+          path="/creater/:Id"
+          element={<Profile sidebar={sidebar} lightToggle={lightToggle} />}
+        />
       </Routes>
     </div>
   );
