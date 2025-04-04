@@ -13,7 +13,7 @@
   margin-right: 20px;
 }
 
-.side-link{
+.side-link {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -22,37 +22,63 @@
   cursor: pointer;
 }
 
-.sidebar hr{
-border: 0;
-height: 1px;
-background: #ccc;
-width: 85%;
+.sidebar hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 85%;
 }
 
-.subscribed-list h3{
-    font-size: 13px;
-    margin: 20px 0;
-    color: #5a5a5a;
+.subscribed-list h3 {
+  font-size: 13px;
+  margin: 20px 0;
+  color: #5a5a5a;
 }
 
-.subscribed-list img{
-    width: 25px;
-    border-radius: 50%;
-    margin-right: 20px;
-} 
-.small-sidebar{
-    width: 5%;
+.subscribed-list img {
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.small-sidebar {
+  width: 5%;
 }
 
-.small-sidebar p{
-    display: none;
+.small-sidebar p {
+  display: none;
 }
 
-.small-sidebar h3{
-    display: none;
+.small-sidebar h3 {
+  display: none;
 }
 
-.small-sidebar hr{
-   width: 50%;
-   margin-bottom: 25px; 
+.small-sidebar hr {
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+/* Dark Mode for Sidebar */
+.dark-mode.sidebar {
+  background-color: #0d0d0d;
+}
+
+.dark-mode .side-link p {
+  color: #f1f1f1;
+}
+
+.dark-mode .sidebar hr {
+  background: #444;
+}
+
+.dark-mode .subscribed-list h3 {
+  color: #bfbfbf;
+}
+
+.dark-mode .subscribed-list p {
+  color: #e0e0e0;
+}
+
+.dark-mode .sortcut-links img,
+.dark-mode .subscribed-list img {
+  filter: brightness(0) invert(1);
 }
