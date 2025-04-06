@@ -1,3 +1,4 @@
+/* Navbar Base Styles */
 nav {
   padding: 10px 2%;
   justify-content: space-between;
@@ -6,8 +7,16 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
+.flex-div {
+  display: flex;
+  align-items: center;
+}
+
+/* Left Section */
 .nav-left .menu_icon {
   width: 22px;
   margin-right: 25px;
@@ -18,11 +27,14 @@ nav {
   filter: brightness(5.8) invert(1);
 }
 
+/* Middle Section */
 .nav-middle .search-box {
   border: 1px solid #ccc;
   margin-right: 15px;
   padding: 8px 12px;
   border-radius: 25px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-middle .search-box input {
@@ -36,9 +48,15 @@ nav {
   width: 15px;
 }
 
+/* Right Section */
+.nav-right {
+  position: relative;
+}
+
 .nav-right img {
   width: 25px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .nav-right .user-icon {
@@ -46,15 +64,50 @@ nav {
   border-radius: 50%;
 }
 
-/* Dark Mode Enhancements */
+/* Dropdown Menu Styles */
+.user-dropdown {
+  position: absolute;
+  top: 60px; /* Adjust based on nav height */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 10px 0;
+  z-index: 100;
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+}
+
+.user-dropdown li {
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.user-dropdown li:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show dropdown when active */
+.user-dropdown.active {
+  display: flex;
+}
+
+/* ========== DARK MODE ========== */
 .dark-mode {
   background-color: #1a1a1a;
-  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); */
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+              rgba(0, 0, 0, 0.12) 0px -12px 30px,
+              rgba(0, 0, 0, 0.12) 0px 4px 6px,
+              rgba(0, 0, 0, 0.17) 0px 12px 13px,
+              rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.dark-mode .logo{
+
+.dark-mode .logo {
   filter: brightness(0) invert(1);
 }
 
@@ -77,4 +130,19 @@ nav {
 
 .dark-mode .nav-right .user-icon {
   filter: none;
+}
+
+/* Dark Mode: User Dropdown */
+.dark-mode .user-dropdown {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .user-dropdown li {
+  color: #f1f1f1;
+}
+
+.dark-mode .user-dropdown li:hover {
+  background-color: #3a3a3a;
 }

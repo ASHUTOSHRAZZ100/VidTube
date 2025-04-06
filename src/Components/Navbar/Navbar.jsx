@@ -11,7 +11,13 @@ import {
   user_profile,
 } from "../Files";
 
-const Navbar = ({ setSidebar, setLightToggle, lightToggle }) => {
+const Navbar = ({
+  setSidebar,
+  setLightToggle,
+  lightToggle,
+  userDropdown,
+  setUserDropdown,
+}) => {
   return (
     <nav className={`flex-div ${lightToggle ? "dark-mode" : ""}`}>
       <div className="nav-left flex-div">
@@ -32,14 +38,24 @@ const Navbar = ({ setSidebar, setLightToggle, lightToggle }) => {
         </div>
       </div>
       <div className="nav-right flex-div">
-        <img src={upload} alt="" />
+        <img src={upload} alt="upload-icon" />
+        <img src={notification} alt="notification-icon" />
         <img
           src={lightDark}
           alt="toggle-icon"
           onClick={() => setLightToggle((prev) => !prev)}
         />
-        <img src={notification} alt="" />{" "}
-        <img className="user-icon" src={user_profile} alt="" />
+        <img
+          className="user-icon"
+          src={user_profile}
+          alt="user-icon"
+          onClick={() => setUserDropdown((prev) => !prev)}
+        />
+        <ul className={`user-dropdown ${userDropdown ? "active" : ""}`}>
+          <li onClick={() => navigate("/login")}>Login</li>
+          <li onClick={() => navigate("/settings")}>Settings</li>
+          <li onClick={() => navigate("/logout")}>Logout</li>
+        </ul>
       </div>
     </nav>
   );
