@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import {
   menu,
   logo,
@@ -18,6 +18,8 @@ const Navbar = ({
   userDropdown,
   setUserDropdown,
 }) => {
+
+  const navigate = useNavigate();
   return (
     <nav className={`flex-div ${lightToggle ? "dark-mode" : ""}`}>
       <div className="nav-left flex-div">
@@ -52,7 +54,7 @@ const Navbar = ({
           onClick={() => setUserDropdown((prev) => !prev)}
         />
         <ul className={`user-dropdown ${userDropdown ? "active" : ""}`}>
-          <li onClick={() => navigate("/login")}>Login</li>
+          <li onClick={() => navigate(`/login`)}>Login</li>
           <li onClick={() => navigate("/settings")}>Settings</li>
           <li onClick={() => navigate("/logout")}>Logout</li>
         </ul>
