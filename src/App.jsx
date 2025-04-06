@@ -7,12 +7,17 @@ import Profile from "./Pages/Profile/Profile";
 function App() {
   const [sidebar, setSidebar] = useState(false);
   const [lightToggle, setLightToggle] = useState(false);
+  const [userDropdown,setUserDropdown] = useState(false);
+  console.log(import.meta.env.VITE_SOME_KEY);
+  
   return (
     <div className={`main ${lightToggle ? "dark-mode" : ""}`}>
       <Navbar
         setSidebar={setSidebar}
         setLightToggle={setLightToggle}
         lightToggle={lightToggle}
+        userDropdown={userDropdown}
+        setUserDropdown={setUserDropdown}
       />
       <Routes>
         <Route
