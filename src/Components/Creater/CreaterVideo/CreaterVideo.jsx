@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CreaterVideo.css";
 import { useNavigate } from "react-router-dom";
 import { thumbnail1, dots, tom, approve } from "../../Files";
+import ImageMenu from "../../Buttons/ImageMenu/ImageMenu";
 const CreaterVideo = ({ lightToggle }) => {
   const navigate = useNavigate();
 
@@ -14,6 +15,7 @@ const CreaterVideo = ({ lightToggle }) => {
   };
 
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
 
   return (
     <div className={`main-container ${lightToggle ? "dark-mode" : ""}`}>
@@ -25,33 +27,48 @@ const CreaterVideo = ({ lightToggle }) => {
       </ul>
       <hr />
       <div className="feed">
-        {arr.map((_, index) => (
-          <div
-            onClick={() => {
-              navigate(`/video/1245/2365`);
-            }}
-            class="video-card"
-          >
-            <div class="video-thumbnail-container">
-              <img
-                class="video-thumbnail"
-                src={thumbnail1}
-                alt="Video thumbnail"
-              />
-              <span class="video-duration">17:00</span>
-            </div>
-            <div class="video-content">
-              <div class="video-info">
-                <h2 class="video-title">
-                  100 free seats every month, DSA sheet, Live classes | Coding
-                  Hero V2
-                </h2>
-                <p class="video-meta">25K views • 6 days ago</p>
+        {arr.map((_, index) => {
+          const dropdownOpen = openDropdownIndex === index;
+          const setDropdownOpen = (state) => {
+            if (state) {
+              setOpenDropdownIndex(index);
+            } else {
+              setOpenDropdownIndex(null);
+            }
+          };
+
+          return (
+            <div
+              onClick={() => {
+                navigate(`/video/1245/2365`);
+              }}
+              class="video-card"
+            >
+              <div class="video-thumbnail-container">
+                <img
+                  class="video-thumbnail"
+                  src={thumbnail1}
+                  alt="Video thumbnail"
+                />
+                <span class="video-duration">17:00</span>
               </div>
-              <img class="menu-icon" src={dots} alt="Options menu" />
+              <div class="video-content">
+                <div class="video-info">
+                  <h2 class="video-title">
+                    100 free seats every month, DSA sheet, Live classes | Coding
+                    Hero V2
+                  </h2>
+                  <p class="video-meta">25K views • 6 days ago</p>
+                </div>
+                <ImageMenu
+                  lightToggle={lightToggle}
+                  dropdownOpen={dropdownOpen}
+                  setDropdownOpen={setDropdownOpen}
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

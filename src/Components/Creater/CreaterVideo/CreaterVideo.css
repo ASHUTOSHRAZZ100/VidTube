@@ -25,12 +25,13 @@
 
 .main-container .video-card {
   width: 100%;
-  max-width: 350px; /* Adjust as needed */
+  max-width: 350px; 
   background-color: #fff;
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-bottom: 10px;
   transition: background-color 0.3s;
+  position: relative;
 }
 
 .main-container .video-thumbnail {
