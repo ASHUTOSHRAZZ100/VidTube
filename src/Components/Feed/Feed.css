@@ -1,3 +1,4 @@
+/* ====== Feed Layout ====== */
 .feed {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -5,31 +6,29 @@
   grid-row-gap: 30px;
   margin-top: 15px;
 }
+
 .card {
   cursor: pointer;
 }
+
 .card img {
   width: 100%;
   border-radius: 10px;
 }
 
+/* ====== Thumbnail/Creator Section ====== */
 .thumbnail-creater {
   display: flex;
   flex-direction: row;
-  background-color: #ffff;
+  background-color: #fff;
+  position: relative;
 }
+
 #img-creater {
   width: 50px;
   height: 50%;
   border-radius: 50%;
   border: 3px solid white;
-  margin: 4px 7px;
-}
-
-#img-menu {
-  width: 20px;
-  height: 50%;
-  border-radius: 50%;
   margin: 4px 7px;
 }
 
@@ -46,53 +45,59 @@
   color: #555;
   margin: 6px 0;
 }
+
 .thumbnail-creater p {
   font-size: 14px;
   font-weight: 200;
   color: #8a8a8a;
 }
+
 #p-link {
   color: #5b5959;
   font-weight: 400;
 }
+
 #p-link:hover {
   color: #272222;
   font-weight: 400;
 }
+
 #p-link-approve-icon {
   width: 15px;
-  /* background-color: aliceblue; */
   object-fit: contain;
 }
 
-/* Dark Mode Enhancements */
-.dark-feed {
+
+/* ====== Dark Mode Enhancements ====== */
+.dark-mode {
   background-color: #0d0d0d;
 }
 
-.dark-feed .thumbnail-creater {
+.dark-mode .thumbnail-creater {
   background-color: #0d0d0d;
 }
 
-.dark-feed #img-creater {
+.dark-mode #img-creater {
   border: 3px solid #1a1a1a;
 }
 
-.dark-feed #img-menu {
-  filter: brightness(0) invert(1);
+.dark-mode .img-menu {
+  color: #fff;
 }
 
-.dark-feed .thumbnail-creater h2 {
+.dark-mode .thumbnail-creater h2 {
   color: #f1f1f1;
 }
 
-.dark-feed #p-link {
+.dark-mode #p-link {
   color: #d1d1d1;
 }
-.dark-feed #p-link:hover {
+
+.dark-mode #p-link:hover {
   color: #ffffff;
 }
 
-.dark-feed .thumbnail-creater p {
+.dark-mode .thumbnail-creater p {
   color: #aaaaaa;
 }
+
