@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./video.css";
-import PlayVideo from "../../Components/PlayVideo/PlayVideo";
-import Recommended from "../../Components/Recommended/Recommended";
+import { PlayVideo, Recommended } from "../../Components/Components.Files.js";
+import { ThemeContext } from "../../App";
 
-const Video = ({ lightToggle }) => {
-  console.log("light->", lightToggle);
+const Video = () => {
+  const { lightToggle } = useContext(ThemeContext);
   return (
     <div className={`play-container ${lightToggle ? "dark-mode" : ""}`}>
-      <PlayVideo lightToggle={lightToggle} />
-      <Recommended lightToggle={lightToggle} />
+      <PlayVideo />
+      <Recommended />
     </div>
   );
 };
