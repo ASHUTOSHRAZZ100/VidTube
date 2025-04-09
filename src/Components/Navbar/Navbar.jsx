@@ -18,31 +18,11 @@ const Navbar = () => {
     lightToggle,
     setLightToggle,
     setSidebar,
+    sidebar,
     userDropdown,
     setUserDropdown,
   } = useContext(ThemeContext);
-
   const handleLogout = async () => {
-    try {
-      console.log("logout");
-      await axios.post(
-        `${import.meta.env.VITE_SERVER}/users/logout`,
-        {},
-        {
-          withCredentials: true,
-        }
-      );
-
-      // Clear user from context
-      console.log("logout1");
-      setUser(null);
-      console.log("logout2");
-
-      // Redirect to login or homepage
-      navigate("/login");
-    } catch (error) {
-      console.error("Logout failed:", error);
-    }
   };
 
   return (

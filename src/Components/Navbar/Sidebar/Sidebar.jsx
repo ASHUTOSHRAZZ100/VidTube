@@ -64,11 +64,11 @@ const Sidebar = () => {
               <p>Justin Bieber</p>
             </div>
             <div className="side-link">
-              <img src={cameron} alt="" />
+              <img src={tom} alt="" />
               <p>Nas Daily</p>
             </div>
             <div className="side-link">
-              <img src={megan} alt="" />
+              <img src={tom} alt="" />
               <p>5-Minute</p>
             </div>
           </div>
