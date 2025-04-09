@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ImageMenu.css";
-import { MoreVertical } from "lucide-react";
+import { EllipsisVertical } from "../../../assets/Icons.FIle";
+import { ThemeContext } from "../../../App";
 
-const ImageMenu = ({ dropdownOpen, setDropdownOpen, lightToggle }) => {
+const ImageMenu = ({ dropdownOpen, setDropdownOpen }) => {
+  const { lightToggle } = useContext(ThemeContext);
   return (
     <div
       className={`menu-container ${lightToggle ? "dark-mode" : ""}`}
@@ -11,7 +13,7 @@ const ImageMenu = ({ dropdownOpen, setDropdownOpen, lightToggle }) => {
         setDropdownOpen(!dropdownOpen);
       }}
     >
-      <MoreVertical className="img-menu" />
+      <EllipsisVertical className="img-menu" />
 
       {dropdownOpen && (
         <ul className="menu-dropdown active">
