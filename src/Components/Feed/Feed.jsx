@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Feed.css";
 import {
-  approve,
-  dots,
   thumbnail1,
   thumbnail2,
   thumbnail3,
@@ -15,9 +13,12 @@ import {
 } from "../Files";
 import { useNavigate } from "react-router-dom";
 import ImageMenu from "../Buttons/ImageMenu/ImageMenu";
+import { ThemeContext } from "../../App";
+import { CircleCheckBig } from "../../assets/Icons.FIle";
 
-const Feed = ({ lightToggle }) => {
+const Feed = () => {
   const navigate = useNavigate();
+  const { lightToggle } = useContext(ThemeContext);
 
   const checkHeaderLenght = (header) => {
     header = header.trim();
@@ -99,13 +100,12 @@ const Feed = ({ lightToggle }) => {
                     navigate(`/creater/10`);
                   }}
                 >
-                  Greatstack{" "}
-                  <img id="p-link-approve-icon" src={approve} alt="" />
+                  Greatstack
+                  <CircleCheckBig className="icon CircleCheckBig-icon" />
                 </p>
                 <p>15k views &bull; 2 day ago</p>
               </div>
               <ImageMenu
-                lightToggle={lightToggle}
                 dropdownOpen={dropdownOpen}
                 setDropdownOpen={setDropdownOpen}
               />

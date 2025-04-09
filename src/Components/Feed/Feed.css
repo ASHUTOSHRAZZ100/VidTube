@@ -62,11 +62,12 @@
   font-weight: 400;
 }
 
-#p-link-approve-icon {
-  width: 15px;
-  object-fit: contain;
+.CircleCheckBig-icon {
+  width: 12px;
+  height: 12px;
+  color: #5b5959;
+  margin-left: 5px;
 }
-
 
 /* ====== Dark Mode Enhancements ====== */
 .dark-mode {
@@ -89,6 +90,9 @@
   color: #f1f1f1;
 }
 
+.dark-mode .CircleCheckBig-icon {
+  color: #d1d1d1;
+}
 .dark-mode #p-link {
   color: #d1d1d1;
 }
@@ -100,4 +104,3 @@
 .dark-mode .thumbnail-creater p {
   color: #aaaaaa;
 }
-
