@@ -9,7 +9,6 @@ import {
   thumbnail6,
   thumbnail7,
   thumbnail8,
-  dots,
 } from "../Files";
 import { useNavigate } from "react-router-dom";
 import ImageMenu from "../Buttons/ImageMenu/ImageMenu";
@@ -82,9 +81,9 @@ const Recommended = ({ lightToggle }) => {
               <p className="video-stats">199k Views &bull; 3 days</p>
             </div>
             <ImageMenu
-             lightToggle={lightToggle}
-             dropdownOpen={dropdownOpen}
-             setDropdownOpen={setDropdownOpen}
+              lightToggle={lightToggle}
+              dropdownOpen={dropdownOpen}
+              setDropdownOpen={setDropdownOpen}
             />
           </div>
         );
