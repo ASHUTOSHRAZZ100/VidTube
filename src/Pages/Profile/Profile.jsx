@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Profile.css";
-import Creater from "../../Components/Creater/Creater";
-import Sidebar from "../../Components/Navbar/Sidebar/Sidebar";
-import CreaterVideo from "../../Components/Creater/CreaterVideo/CreaterVideo";
-const Profile = ({ sidebar, lightToggle }) => {
-  console.log("lightToggle->", lightToggle);
+import {
+  Creater,
+  Sidebar,
+  CreaterVideo,
+} from "../../Components//Components.Files";
+import { ThemeContext } from "../../App";
+
+const Profile = () => {
+  const { lightToggle, sidebar } = useContext(ThemeContext);
   return (
     <div className={`parent-container ${lightToggle ? "dark-mode" : ""}`}>
       <Sidebar sidebar={sidebar} lightToggle={lightToggle} />
