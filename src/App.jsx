@@ -1,10 +1,9 @@
 import { useState, createContext } from "react";
-import Navbar from "./Components/Navbar/Navbar";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Video from "./Pages/Video/Video";
 import Profile from "./Pages/Profile/Profile";
-import { Register, Login } from "./Components/Components.Files";
+import { Register, Login, Navbar } from "./Components/Components.Files";
 import { Toaster } from "react-hot-toast";
 
 const ThemeContext = createContext();
