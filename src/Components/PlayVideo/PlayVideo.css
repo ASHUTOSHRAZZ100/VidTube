@@ -23,11 +23,6 @@
   color: #5a5a5a;
 }
 
-.video-actions img {
-  width: 20px;
-  margin-right: 8px;
-}
-
 .video-actions span {
   display: inline-flex;
   align-items: center;
@@ -82,10 +77,10 @@
   cursor: pointer;
 }
 
-.subscribe-button-mode{
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+.subscribe-button-mode {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 }
 
 .video-description {
@@ -129,9 +124,7 @@
 }
 
 .comment-actions {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
+  margin: 10px;
 }
 .comment-actions img {
   border-radius: 0;
@@ -146,45 +139,44 @@
 
 /* Dark Mode Enhancements */
 .dark-mode {
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-  }
-  
-  .dark-mode .video-title,
-  .dark-mode .view-info,
-  .dark-mode .video-meta,
-  .dark-mode .video-stats,
-  .dark-mode .publisher-name,
-  .dark-mode .subscriber-count,
-  .dark-mode .video-description p,
-  .dark-mode .comment-count,
-  .dark-mode .comment-author,
-  .dark-mode .comment-date,
-  .dark-mode .comment-actions span {
-    color: #e0e0e0;
-  }
-  
-  .dark-mode .video-actions img,
-  .dark-mode .comment-actions img {
-    filter: brightness(0) invert(1); /* Make icons white */
-  }
-  
-  .dark-mode .subscribe-button {
-    background-color: white;
-    color: black;
-  }
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+}
 
-  .dark-mode .subscribe-button-mode{
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-  }
-  
-  .dark-mode hr {
-    background: #333;
-  }
-  
-  .dark-mode .video-player {
-    border: 2px solid #222;
-  }
-  
+.dark-mode .video-title,
+.dark-mode .view-info,
+.dark-mode .video-meta,
+.dark-mode .video-stats,
+.dark-mode .publisher-name,
+.dark-mode .subscriber-count,
+.dark-mode .video-description p,
+.dark-mode .comment-count,
+.dark-mode .comment-author,
+.dark-mode .comment-date,
+.dark-mode .comment-actions span {
+  color: #e0e0e0;
+}
+
+.dark-mode .video-actions img,
+.dark-mode .comment-actions img {
+  filter: brightness(0) invert(1); /* Make icons white */
+}
+
+.dark-mode .subscribe-button {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode .subscribe-button-mode {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.dark-mode hr {
+  background: #333;
+}
+
+.dark-mode .video-player {
+  border: 2px solid #222;
+}

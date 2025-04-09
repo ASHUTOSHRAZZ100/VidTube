@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./PlayVideo.css";
-import {
-  video,
-  like,
-  dislike,
-  share,
-  save,
-  jack,
-  user_profile,
-} from "../Files";
+import { video, jack, user_profile } from "../Files";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../App";
+import {
+  ThumbsUp,
+  ThumbsDown,
+  Share2,
+  BookMarked,
+} from "../../assets/Icons.FIle";
 
-const PlayVideo = ({ lightToggle }) => {
+const PlayVideo = () => {
   const navigate = useNavigate();
   const [subscribeTogle, setSubscribeTogle] = useState(false);
+  const { lightToggle } = useContext(ThemeContext);
   const arr = [1, 2, 3, 4, 5, 6];
 
   return (
@@ -31,19 +31,19 @@ const PlayVideo = ({ lightToggle }) => {
       <div className="video-meta">
         <p className="view-info">1525 views &bull; 2 days ago</p>
         <div className="video-actions">
-          <span className="action-like">
-            <img src={like} alt="like-icon" />
+          <span className="action-like" title="Like">
+            <ThumbsUp />
             125
           </span>
-          <span className="action-dislike">
-            <img src={dislike} alt="dislike-icon" />2
+          <span className="action-dislike" title="Dislike">
+            <ThumbsDown />
           </span>
-          <span className="action-share">
-            <img src={share} alt="share-icon" />
+          <span className="action-share" title="Share">
+            <Share2 />
             Share
           </span>
-          <span className="action-save">
-            <img src={save} alt="save-icon" />
+          <span className="action-save" title="Save to Watch Later">
+            <BookMarked />
             Save
           </span>
         </div>
@@ -97,13 +97,12 @@ const PlayVideo = ({ lightToggle }) => {
               <p className="comment-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Distinctio ducimus nihil dolore! Quaerat, praesentium!
+                <span className="comment-actions">
+                  <ThumbsUp />
+                  245
+                  <ThumbsDown />
+                </span>
               </p>
-              <div className="comment-actions">
-                <img src={like} alt="like-comment" />
-                <span>244</span>
-                <img src={dislike} alt="dislike-comment" />
-                <span>30</span>
-              </div>
             </div>
           </div>
         ))}
