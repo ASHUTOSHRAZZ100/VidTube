@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./CreaterVideo.css";
 import { useNavigate } from "react-router-dom";
-import { thumbnail1, dots, tom, approve } from "../../Files";
+import { thumbnail1 } from "../../Files";
 import ImageMenu from "../../Buttons/ImageMenu/ImageMenu";
-const CreaterVideo = ({ lightToggle }) => {
+import { ThemeContext } from "../../../App";
+
+const CreaterVideo = () => {
   const navigate = useNavigate();
+  const { lightToggle } = useContext(ThemeContext);
 
   const checkHeaderLenght = (header) => {
     header = header.trim();
