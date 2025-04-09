@@ -1,23 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Sidebar.css";
+import { jack, simon, tom } from "../../Files";
 import {
-  home,
-  game_icon,
-  automobiles,
-  sports,
-  entertainment,
-  tech,
-  music,
-  blogs,
-  news,
-  jack,
-  simon,
-  tom,
-  megan,
-  cameron,
-} from "../../Files";
+  House,
+  CircleUser,
+  History,
+  Youtube,
+  TvMinimalPlay,
+} from "../../../assets/Icons.FIle";
+import { ThemeContext } from "../../../App";
 
-const Sidebar = ({sidebar,lightToggle}) => {
+const Sidebar = () => {
+  const { lightToggle, sidebar } = useContext(ThemeContext);
   return (
     <div
       className={`sidebar ${sidebar ? "" : "small-sidebar"} ${
@@ -26,66 +20,60 @@ const Sidebar = ({sidebar,lightToggle}) => {
     >
       <div className="sortcut-links">
         <div className="side-link">
-          <img src={home} alt="" />
+          <House className="icon House-icon" />
           <p>Home</p>
         </div>
         <div className="side-link">
-          <img src={game_icon} alt="" />
-          <p>Gaming</p>
+          <TvMinimalPlay className="icon TvMinimalPlay-icon" />
+          <p>Subscriptions</p>
         </div>
         <div className="side-link">
-          <img src={automobiles} alt="" />
-          <p>Automobile</p>
-        </div>
-        <div className="side-link">
-          <img src={sports} alt="" />
-          <p>Sports</p>
-        </div>
-        <div className="side-link">
-          <img src={entertainment} alt="" />
-          <p>Entertainment</p>
-        </div>
-        <div className="side-link">
-          <img src={tech} alt="" />
-          <p>Tech</p>
-        </div>
-        <div className="side-link">
-          <img src={music} alt="" />
-          <p>Music</p>
-        </div>
-        <div className="side-link">
-          <img src={blogs} alt="" />
-          <p>Bolg</p>
-        </div>
-        <div className="side-link">
-          <img src={news} alt="" />
-          <p>News</p>
-        </div>
-        <hr />
-      </div>
-      <div className="subscribed-list">
-        <h3>Subscribed</h3>
-        <div className="side-link">
-          <img src={jack} alt="" />
-          <p>PewDiePie</p>
-        </div>
-        <div className="side-link">
-          <img src={simon} alt="" />
-          <p>MrBeast</p>
-        </div>
-        <div className="side-link">
-          <img src={tom} alt="" />
-          <p>Justin Bieber</p>
-        </div>
-        <div className="side-link">
-          <img src={cameron} alt="" />
-          <p>Nas Daily</p>
-        </div>
-        <div className="side-link">
-          <img src={megan} alt="" />
-          <p>5-Minute</p>
+          <CircleUser className="icon CircleUser-icon" />
+          <p>You</p>
         </div>
       </div>
+      {!sidebar ? (
+        ""
+      ) : (
+        <>
+          <hr />
+          <div className="you-list">
+            <h3>You</h3>
+            <div className="side-link">
+              <History className="icon History-icon" />
+              <p>History</p>
+            </div>
+            <div className="side-link">
+              <Youtube className="icon Youtube-icon" />
+              <p>Your Video</p>
+            </div>
+          </div>
+          <hr />
+          <div className="subscribed-list">
+            <h3>Subscribed</h3>
+            <div className="side-link">
+              <img src={jack} alt="" />
+              <p>PewDiePie</p>
+            </div>
+            <div className="side-link">
+              <img src={simon} alt="" />
+              <p>MrBeast</p>
+            </div>
+            <div className="side-link">
+              <img src={tom} alt="" />
+              <p>Justin Bieber</p>
+            </div>
+            <div className="side-link">
+              <img src={cameron} alt="" />
+              <p>Nas Daily</p>
+            </div>
+            <div className="side-link">
+              <img src={megan} alt="" />
+              <p>5-Minute</p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
